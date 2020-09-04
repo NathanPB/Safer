@@ -39,7 +39,16 @@ public void unsafeCodeFragment() {
 
 ```java
 public String unsafeCodeFragment() {
-    return Safer.returning("default value to return if something goes wrong", () -> {
+    return Safer.run("default value to return if something goes wrong", () -> {
+      // Critical and unsafe code fragment
+    })
+}
+```
+
+If your default value is something a bit expensive, do it lazy
+```java
+public String unsafeCodeFragment() {
+    return Safer.runLazy(() -> factorial(12), () -> {
       // Critical and unsafe code fragment
     })
 }

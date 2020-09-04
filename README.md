@@ -22,8 +22,7 @@ build.gradle
 ```
 ```groovy
     dependencies {
-        modApi 'com.github.NathanPB:Safer:VERSION'
-        include 'com.github.NathanPB:Safer:VERSION'
+        implementation 'com.github.NathanPB:Safer:VERSION'
     }
 ```
 

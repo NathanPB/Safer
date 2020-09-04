@@ -23,6 +23,16 @@ public class Safer {
         }
     }
 
+    public static <T> T runLazy(Supplier<T> defaultValue, Supplier<T> runner) {
+        try {
+            return runner.get();
+        } catch (Throwable e) {
+            catchThatShit(e);
+            return defaultValue.get();
+        }
+    }
+
+
     private static void catchThatShit(Throwable t) {
         if (shouldLog) {
             new SaferException(t).printStackTrace();

@@ -13,8 +13,8 @@ public class SaferReturnTest implements SaferTest {
 
     private <T> void wrap(Class<? extends Throwable> type, T defaultValue, Supplier<T> r) {
         assertThrows(type, r::get);
-        assertDoesNotThrow(() -> Safer.returning(defaultValue, r));
-        assertEquals(defaultValue, Safer.returning(defaultValue, r));
+        assertDoesNotThrow(() -> Safer.run(defaultValue, r));
+        assertEquals(defaultValue, Safer.run(defaultValue, r));
     }
 
     @Test

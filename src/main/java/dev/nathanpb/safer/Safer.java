@@ -14,7 +14,7 @@ public class Safer {
         }
     }
 
-    public static <T> T returning(T defaultValue, Supplier<T> runner) {
+    public static <T> T run(T defaultValue, Supplier<T> runner) {
         try {
             return runner.get();
         } catch (Throwable e) {

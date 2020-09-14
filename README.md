@@ -56,4 +56,4 @@ public String unsafeCodeFragment() {
 }
 ```
 
-For more examples check [the tests files](tree/master/src/test/java)
+For more examples check [the tests files](https://github.com/NathanPB/Safer/tree/master/src/test/java)

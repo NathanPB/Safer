@@ -1,3 +1,5 @@
+![](https://github.com/NathanPB/Safer/workflows/Java%20CI%20with%20Gradle/badge.svg)
+
 Safer is a little JVM error handling library made to catch errors in critical points of the program execution when they are not expected to happen.
 
 # Whats the point
